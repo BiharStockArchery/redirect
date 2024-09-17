@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #111;
+}
+
+.background-container {
+  position: relative;
+  background-image: url('1.png'); /* Replace with your small image path */
+  background-repeat: repeat; /* This will repeat the image */
+  background-size: 200px 200px; /* Adjust the size of the repeated image */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay for better readability */
+}
+
+.content {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  max-width: 80%;
+  z-index: 1;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 1.4;
+  margin-bottom: 30px;
+  font-weight: 600;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.pop-button {
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  color: white;
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  box-shadow: 0px 8px 15px rgba(255, 65, 108, 0.3);
+}
+
+.pop-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 15px 30px rgba(255, 65, 108, 0.4);
+  background: linear-gradient(90deg, #ff4b2b, #ff416c);
+}
+
+.pop-button:active {
+  transform: scale(0.95);
+  box-shadow: none;
+}
+
+@media (max-width: 768px) {
+  h1 {
+      font-size: 2rem;
+  }
+
+  .pop-button {
+      font-size: 1rem;
+      padding: 12px 24px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
